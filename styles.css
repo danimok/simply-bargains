@@ -1,0 +1,87 @@
+:root {
+  --bg: #f7f4ef;
+  --ink: #1c1917;
+  --muted: #57534e;
+  --card: #ffffff;
+  --accent: #0f766e;
+  --accent-ink: #ffffff;
+  --border: #e7e5e4;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(28, 25, 23, 0.06);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: linear-gradient(180deg, #efe8dc 0%, var(--bg) 220px);
+  line-height: 1.55;
+}
+a { color: var(--accent); }
+.hero, main, footer {
+  width: min(920px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+.hero {
+  padding: 3.5rem 0 2rem;
+}
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  line-height: 1.1;
+  margin: 0 0 1rem;
+}
+.lead {
+  max-width: 38rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin: 0 0 1.5rem;
+}
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--accent-ink);
+  text-decoration: none;
+  padding: 0.85rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.button:hover { filter: brightness(1.05); }
+main { padding-bottom: 3rem; }
+h2 { margin: 2rem 0 0.5rem; font-size: 1.45rem; }
+.section-note { color: var(--muted); margin-top: 0; }
+.products {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.products li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.2rem;
+  box-shadow: var(--shadow);
+}
+.products h3 { margin: 0 0 0.35rem; font-size: 1.05rem; }
+.price {
+  margin: 0 0 0.6rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.products p:last-child { margin: 0; color: var(--muted); }
+footer {
+  padding: 1.5rem 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+}
